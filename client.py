@@ -2,9 +2,10 @@ import socket
 import sys
 
 
-# TCP/IPソケット作成
+# ドメイン：AF_UNIX、タイプ：SOCK_STREAMでTCP/IPソケット作成
 sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
 
+# サーバが待ち受けている特定の場所にソケットを設定
 server_address = '/tmp/socket_file'
 print('connecting to {}'.format(server_address))
 
