@@ -2,8 +2,10 @@ import socket
 import os
 from faker import Faker
 
+# ドメイン：AF_UNIX、タイプ：SOCK_STREAMでソケット作成。
 sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
 
+# ソケットのパスを設定。
 server_address = '/tmp/socket_file'
 
 faker = Faker()
